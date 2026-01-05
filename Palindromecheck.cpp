@@ -1,5 +1,10 @@
 #include<iostream>
 using namespace std;
+
+//Q9. Palindrome Number
+//Given an integer x, return true if x is a palindrome, and false otherwise.
+
+
 bool isPalindrome(int x) {
         if(x<0){
             return false;

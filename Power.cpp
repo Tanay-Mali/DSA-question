@@ -1,6 +1,11 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+
+//Q50. Pow(x, n)
+//Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
+
+//NOTE:
 //Logic pata hai par constraint dhyan me rakh
 // binary form ko long mein le kyuki bade negative number ka negation nai hota
 // ans ko bhi double me le ;

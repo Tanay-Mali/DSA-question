@@ -2,6 +2,11 @@
 #include<vector>
 using namespace std;
 
+//Q169. Majority Element
+//Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+
+
 int majorityElement(vector<int>& nums){
     int freq=0;//to track the frequency of the number;
     int curr=nums[0];//we set the a number to track;

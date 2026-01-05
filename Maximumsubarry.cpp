@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+//Q53. Maximum Subarray
+//Given an integer array nums, find the subarray with the largest sum, and return its sum.
+
+
 int maxSubArray(vector<int>& nums) {
         int sum=0,maxsum=INT32_MIN;
         for(int val:nums){
