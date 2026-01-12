@@ -10,7 +10,7 @@ using namespace std;
 //It's too easy to solve but currently confused
 //Solution Was accepted on leetcode with runtime 0ms ; but i use library function for sorting for now i will also try with sorting algorithm like bubble , insertion and selection;
 //currently i am confuse because the library function sort was accepted on leetcode but in my local device it shows error like sort was undefine
-
+//Time Complexity is O((N+M)log(M+N))
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         for(int i=m,j=0;i<m+n,j<n;i++,j++){
             nums1[i]=nums2[j];
@@ -18,12 +18,31 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         sort(nums1.begin(),nums1.end());
     }
 
+//Date:-12-01-2026 Time:-9:35 pm
+//Solving with bubble sort algorithm
+//Accepted with runtime 4ms may be time complexity is O(n^2);  Since for merging it is m-n let it is N and for sorting it is (m+n)^2 so altogeter may be it is O((m+n)^2)
+void mergeBubbleSort(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        for(int i=m,j=0;i<m+n,j<n;i++,j++){
+            nums1[i]=nums2[j];
+        }
+        for(int i=0;i<m+n-1;i++){
+            for(int j=0;j<m+n-1;j++){
+                if(nums1[j]>nums1[j+1]){
+                swap(nums1[j],nums1[j+1]);
+                }
+            }
+            
+        }
+    
+    }
+
+
 int main(){
     vector<int> nums1={1,2,3,0,0,0};
     vector<int> nums2={2,5,6};
     int m=nums1.size();
     int n=nums2.size();
-    merge(nums1,m,nums2,n);
+    mergeBubbleSort(nums1,m,nums2,n);
     for(int i=0;i<m;i++){
         cout<<nums1[i]<<" "<<endl;
     }
