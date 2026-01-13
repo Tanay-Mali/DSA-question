@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 
@@ -11,6 +12,7 @@ using namespace std;
 //Solution Was accepted on leetcode with runtime 0ms ; but i use library function for sorting for now i will also try with sorting algorithm like bubble , insertion and selection;
 //currently i am confuse because the library function sort was accepted on leetcode but in my local device it shows error like sort was undefine
 //Time Complexity is O((N+M)log(M+N))
+//Updated :- So we have to include the library <algorithm> to use the library function sort
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         for(int i=m,j=0;i<m+n,j<n;i++,j++){
             nums1[i]=nums2[j];
