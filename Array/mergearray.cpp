@@ -25,12 +25,12 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 //Accepted with runtime 4ms may be time complexity is O(n^2);  Since for merging it is m-n let it is N and for sorting it is (m+n)^2 so altogeter may be it is O((m+n)^2)
 void mergeBubbleSort(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         for(int i=m,j=0;i<m+n,j<n;i++,j++){
-            nums1[i]=nums2[j];
+            nums1[i]=nums2[j];//Merging
         }
         for(int i=0;i<m+n-1;i++){
             for(int j=0;j<m+n-1;j++){
                 if(nums1[j]>nums1[j+1]){
-                swap(nums1[j],nums1[j+1]);
+                swap(nums1[j],nums1[j+1]);//Sorting
                 }
             }
             
