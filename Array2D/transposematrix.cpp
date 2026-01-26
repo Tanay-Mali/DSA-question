@@ -7,7 +7,7 @@ using namespace std;
 // Given a 2D integer array matrix, return the transpose of matrix. The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.
 
 //Date:19-01-2026 Time: 10:15pm
-//Solution(Solved on self)
+//Solution
 //It is really easy to solve than i think but i solved with Time complexity O(N^2) and since we have to travel whole matrix so the time will be O(N^2) ans runtime 0ms with Space complexiety O(N*M)
 //The approach is just set first Row of answer array to first element of each row of given array And same for remaining array
 

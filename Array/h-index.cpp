@@ -7,7 +7,7 @@ using namespace std;
 // According to the definition of h-index on Wikipedia: The h-index is defined as the maximum value of h such that the given researcher has published at least h papers that have each been cited at least h times.
 
 //Date: 15-01-2026 Time:-4:00pm
-//Solved: Today in morning i just found this question on leetcode and realize that it is easy to solve. The first approach came to my mind is the approach i saw on in the video of book allocation question solved by Shradha didi. I directly try to think with binary search on the search range but then realize that it may give wrong answer in some cases so i just do linear search on the search range then check whether each index is valid by the function checkindex()
+//Solved: Today in morning i just found this question on leetcode and realize that it is easy to solve. The first approach came to my mind is the approach i saw on in the video of book allocation question on youtube channel Apna College. I directly try to think with binary search on the search range but then realize that it may give wrong answer in some cases so i just do linear search on the search range then check whether each index is valid by the function checkindex()
 //Solution was accpeted with Time complexity O(N*M) and runtime 4ms, I will try to solve it with the binary search on the search range
 
 //Solution:
