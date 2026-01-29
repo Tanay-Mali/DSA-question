@@ -38,13 +38,31 @@ void mergeBubbleSort(vector<int>& nums1, int m, vector<int>& nums2, int n) {
     
     }
 
+//Date:-29-01-2026 Time:-6:00pm
+//Solution:- I saw this solution on youtube and this is optimal solution. The logic behind the solution is to utilize the extra space in nums1 array provided by question. We will fill that array in reverse order by comparing last elements of both array which one is greater will be at last index of nums1 array. I will suggest you to watch the video on youtube because explaining it here will be so big the channel is Apna College
+
+void mergesort(vector<int>& nums1,int m, vector<int>& nums2,int n){
+    int point=m+n-1,i=m-1,j=n-1;
+
+    while(i>=0 && j>=0){
+        if(nums1[i]>=nums2[j]){
+            nums1[point--]=nums1[i--];
+        }else{
+            nums1[point--]=nums2[j--];
+        }
+    }
+    while(j>=0){
+        nums1[point--]=nums2[j--];
+    }
+    
+}
 
 int main(){
     vector<int> nums1={1,2,3,0,0,0};
     vector<int> nums2={2,5,6};
     int m=nums1.size();
     int n=nums2.size();
-    mergeBubbleSort(nums1,m,nums2,n);
+    mergesort(nums1,m,nums2,n);
     for(int i=0;i<m;i++){
         cout<<nums1[i]<<" "<<endl;
     }
