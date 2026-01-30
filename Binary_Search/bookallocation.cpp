@@ -12,6 +12,7 @@ using namespace std;
 // Calculate and return that minimum possible number.
 // Return -1 if a valid assignment is not possible.
 
+//Date:-30-01-2026, Time:10:15am
 //This question is not present on leetcode. But i saw it on Youtube. In first instance I can't even find the brute force approach so i just watch the video solution and understand the solution logic properly then after many day's taday i try to write it without watching the solution a successfully write the solution.
 //This is the video by which I just not develope that logic but also use the logic to solve the question of H-index which was in this repository Array/h-index.cpp 
 
