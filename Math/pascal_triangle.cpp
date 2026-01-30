@@ -6,6 +6,7 @@ using namespace std;
 // Given an integer numRows, return the first numRows of Pascal's triangle.
 // In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
 
+//Date:-30-01-2026, Time:5:00pm
 //Solved: Accepted With Time Complexity O(numrows²) Runtime 0ms and space complexity O(numrows²)
 //Solution is easier than i thought just the problem before this is how can i generate an array where the array inside it is of increasing size. But then I remember about vector because they can increase capacity dynamically while we can add new element by push back so use this to solve it.
 
