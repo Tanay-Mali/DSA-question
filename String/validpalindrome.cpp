@@ -37,7 +37,42 @@ bool isPalindrome(string s) {
         return true;
     }
 
+//Approach 2: Date:01-02-2026, Time:10:45am
+//This is solution using two pointer method. I saw this solution on youtube.
+//So here we initiallize 2 pointers str and end. Then check whether the character on those pointers are alphanumeric or not for which we define a new function. If it is not a alphanumeric then skip that character. If we get capital letter then just convert it to small letters and then compare if not equal return false else move the pointer towards each other after end of the loop if we not found any non equal charater then return true; 
+
+bool isAlphaNumeric(char ch){
+    if((ch>='A'&& ch<='Z') || (ch>='a' && ch <='z') || (ch>='0' && ch<='9')) return true;
+    return false;
+}
+
+bool isPalindrome(string s) {
+    int n=s.length();    
+    int str=0,end=n-1;
+    while(str<end){
+        if(!isAlphaNumeric(s[str])){
+            str++;
+            continue;
+        }
+        if(!isAlphaNumeric(s[end])){
+            end--;
+            continue;
+        }
+        if((s[str]>='A'&& s[str]<='Z')){
+            s[str]+=32;
+        } else if((s[end]>='A'&& s[end]<='Z')){
+            s[end]+=32;
+        }
+        if(s[str]!=s[end]) return false;
+        str++;
+        end--;
+    }
+    return true;
+
+}
+
 int main(){
     string s="A man, a plan, a canal: Panama";     //The reverse string will be "amanaplanacanalpanama" which is palindrome;
     cout<<isPalindrome(s);
+    return 0;
 }
