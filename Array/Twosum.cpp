@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<unordered_map>
 using namespace std;
 
 //1. Two Sum
@@ -22,6 +23,30 @@ vector<int> twoSum(vector<int>& nums, int target) {
             }
         }
         return ans;
+    }
+
+
+//Date:-05-02-2026
+//Solution-2; Time complexity O(N) run time 3ms space complexity O(N). The solution i watch on youtube and learn how to solve hashing questions.
+//This solution is with hashing means using maps or sets
+//Here we use unordered_map starting with a single loop where we will store the number as key and its index as value in the map 
+//The idea is we need two numbers sum upto target, So let assume the current indexed number is first number and we know the target, so subtracting first number from target will give the second required number.
+//We are storing numbers in map also so we will try to find the second number in the map if that exist then we got both numbers if not then we will store that current number in map.
+//This is unordered_map where accessing any key will take O(1) time and in worst case which is rare it will be O(N). and this is better that normal or multi_map. because they are in based like trees so the accessing time for them is O(log(N)).
+
+
+vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> mapping;
+        int first,sec;
+        for(int i=0;i<nums.size();i++){
+            first=nums[i];
+            sec=target-first;
+            if(mapping.find(sec)!=mapping.end()){
+                return {i,mapping[sec]};
+            }
+            mapping[first]=i;
+        }
+        return{0,0};
     }
 
 int main(){
