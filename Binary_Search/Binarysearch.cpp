@@ -20,6 +20,18 @@ int binarysearch(vector<int> &nums, int target){
     return -1;
 }
 
+//Solution-2; Date: 08-02-2026; Time:5:00pm
+//Solved using recursion and without any help i write the solution perfectly.
+
+bool binarysearch(vector<int> arr, int target,int str, int end){
+    if(str<=end){
+        int mid=str+(end-str)/2;
+        if(arr[mid]==target) return true;
+        return (arr[mid]<target)?binarysearch(arr,target,mid+1,end):binarysearch(arr,target,str,mid-1);
+    }
+    return false;
+}
+
 int main(){
     vector<int> nums={1,0,3,5,9,12};
     int target=9;
