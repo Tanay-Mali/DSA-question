@@ -20,6 +20,26 @@ int fib(int n) {
         return fib(n-1)+fib(n-2);
     }
 
+//Solution-2; Date:-08-02-2026; Time:4:15pm;
+//Solved using loop and time complexity if O(N) runtime is 0ms and space complexity O(1);
+//Using the main idea i.e. number on any index is equal to sum of previous two i store the first two of base in prevans1 and 2 and start loop with i=2 because numbers on 0th and 1st index are already taken in prevans the run the loop by adding both the prevans and changing the value of prevans1 to prevans2 and prevans2 to ans;
+//here prevans1=f(n-2) and prevans2=f(n-1)
+
+int fibonacci(int n){
+    if(n==0) return 0;
+    if(n==1) return 1;
+    int ans;
+    int prevans1=0;
+    int prevans2=1;
+    for(int i=2;i<=n;i++){
+        ans=prevans1+prevans2;
+        prevans1=prevans2;
+        prevans2=ans;
+    }
+    return ans;
+    
+}
+
 int main(){
     int n=4;
     cout<<fib(n)<<endl;
