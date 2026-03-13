@@ -25,11 +25,27 @@ int removeElement(vector<int>& nums, int val) {
     return k;
 }
 
+// Date:13-03-2026 Time:5:00 PM
+// Solution:
+// I just watch what i write an realize that i wrote whole answer perfectly and what i can't do is manipulate the nums array. now i realize how much i learch because at that time i am learning but now i learned something. What i need to change in the solution is replace ans array with nums and there is no need of ans array also.
+
+int removeElement(vector<int>& nums, int val) {
+    int n=nums.size();
+    int k=0;
+    for(int i=0;i<n;i++){
+        if(nums[i]!=val){
+            nums[k]=nums[i];
+            k++;
+        }
+    }
+    return k;
+}
+
 int main(){
     vector<int> nums={3,2,2,3};
     int val=3;
     int ans=removeElement(nums,val);
     for(int digit : nums){
-        cout<<nums<<" ";
+        cout<<digit<<" ";
     }
 }

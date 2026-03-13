@@ -25,6 +25,8 @@ vector<int> sortedSquares(vector<int>& nums) {
             for(int j=i;j<n-1;j++){
             if(ans[j]>ans[j+1]){
                 swap(ans[j],ans[j+1]);
+            }else{
+                break;//breaking loop when the condition is false. Why run whole loop if we just place it on right place before ending the loop (Updation on 13-03-2026 time 5:00Pm (Time is approximate))
             }
         }
         }
